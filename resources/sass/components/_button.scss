@@ -1,0 +1,28 @@
+@use "../app.scss" as *;
+@use "mixins" as *;
+
+.btn-rounded {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.btn-rounded-intro {
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-small {
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-submit {
+    height: 50px;
+    font-weight: 600;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

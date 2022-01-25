@@ -1,0 +1,10 @@
+@use "../../app.scss" as *;
+@use "../../components/mixins" as *;
+
+.sect-venue {
+    padding-top: 10rem;
+    padding-bottom: 0;
+    width: 100vw;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+}

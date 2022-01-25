@@ -1,0 +1,97 @@
+@use "../app.scss" as *;
+@use "../components/mixins" as *;
+
+.login-page {
+    font-family: "Poppins", sans-serif;
+
+    .login-form {
+        padding-top: 7rem;
+        margin-left: 15rem;
+        margin-right: 15rem;
+        width: 60%;
+
+        .desc {
+            font-size: 1.1rem;
+        }
+
+        .form-log {
+            border-color: #8ca1a5;
+            background-color: $primary;
+            color: $white;
+            height: 45px;
+            border: 0;
+            border-bottom: 1px solid #8ca1a5;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            outline: none;
+        }
+
+        .form-log:focus {
+            border-bottom-color: $danger;
+            width: 100%;
+            transition: 0.4s;
+            left: 0;
+        }
+
+        .link-password {
+            text-decoration: none;
+            color: $white;
+        }
+        .link-password:hover {
+            color: #8ca1a5;
+        }
+    }
+
+    .img-cover {
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+
+    .copy {
+        font-size: 14px;
+        position: absolute;
+        bottom: 40px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.signup-form {
+    padding-top: 1.1rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    width: 60%;
+
+    .desc {
+        font-size: 1.1rem;
+    }
+
+    .form-log {
+        border-color: #8ca1a5;
+        background-color: $primary;
+        color: $white;
+        height: 45px;
+        border: 0;
+        border-bottom: 1px solid #8ca1a5;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        outline: none;
+    }
+
+    .form-log:focus {
+        border-bottom-color: $danger;
+        width: 100%;
+        transition: 0.4s;
+        left: 0;
+    }
+
+    .link-password {
+        text-decoration: none;
+        color: $white;
+    }
+    .link-password:hover {
+        color: #8ca1a5;
+    }
+}

@@ -1,0 +1,62 @@
+@use "../app.scss" as *;
+@use "../components/mixins" as *;
+
+.venue-detail {
+    background-color: $primary;
+    padding: 5rem 0 0 0;
+    width: 100vw;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+
+    .carousel-item {
+        height: 550px;
+        .image-carousel {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .description {
+        width: 100%;
+        height: 53vh;
+        border-radius: 40px;
+        position: relative;
+        top: -80px;
+        padding: 35px 50px;
+
+        .desc-title {
+            font-weight: 700;
+            font-size: 32px;
+        }
+
+        .desc-loc {
+            font-weight: 600;
+        }
+
+        .desc-text {
+            line-height: 1.6;
+        }
+
+        .total {
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .btn-submit {
+            height: 50px;
+            font-weight: 600;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .review-venue {
+        margin-top: 100px;
+    }
+}

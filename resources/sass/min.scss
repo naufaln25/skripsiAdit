@@ -1,0 +1,20 @@
+@use "app.scss";
+
+// component
+@use "components/animation";
+@use "components/button";
+@use "components/mixins";
+@use "components/typography";
+@use "components/card";
+
+// sections
+@use "sections/navbar";
+@use "sections/home/getstarted";
+@use "sections/home/intro-section";
+@use "sections/home/reason";
+@use "sections/home/review";
+@use "sections/home/sect-venue";
+@use "sections/venue-detail";
+@use "sections/payment";
+@use "sections/signin";
+@use "sections/footer";

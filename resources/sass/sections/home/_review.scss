@@ -1,0 +1,26 @@
+@use "../../app.scss" as *;
+@use "../../components/mixins" as *;
+
+.sect-4 {
+    background-color: #111;
+    width: 100vw;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+
+    .sect-4-title {
+        margin-bottom: 100px;
+    }
+
+    .sect-4-item {
+        .card-item {
+            border-radius: 18px;
+            border: none;
+            background-color: $secondary;
+
+            .card-item-img {
+                border-top-left-radius: 18px;
+                border-top-right-radius: 18px;
+            }
+        }
+    }
+}

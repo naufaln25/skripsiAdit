@@ -1,0 +1,24 @@
+@use "../app.scss" as *;
+@use "../components/mixins" as *;
+
+.payment {
+    padding-top: 10rem;
+    padding-bottom: 0;
+    width: 100vw;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+
+    .detail {
+        background-color: #111;
+        width: 100%;
+        color: $white;
+        border-radius: 20px;
+    }
+
+    .info {
+        background-color: #111;
+        width: 100%;
+        color: $white;
+        border-radius: 20px;
+    }
+}

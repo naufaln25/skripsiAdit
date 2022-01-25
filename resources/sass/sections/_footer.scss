@@ -1,0 +1,9 @@
+@use "../app.scss" as *;
+@use "../components/mixins" as *;
+
+.footer {
+    width: 100vw;
+    height: max-content;
+    padding-bottom: 80px;
+    font-family: "Poppins", sans-serif;
+}

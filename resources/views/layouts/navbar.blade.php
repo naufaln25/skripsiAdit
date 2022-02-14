@@ -13,8 +13,8 @@
             @endforeach
         </ul>
         <div class="d-flex align-items-center">
-          <a href="#" class="nav-link link-white me-2">Sign In</a>
-          <a href="#" class="btn btn-outline-danger btn-rounded">Daftar Sekarang</a>
+          <a href="{{route('signin')}}" class="nav-link link-white me-2">Sign In</a>
+          <a href="{{route('signup')}}" class="btn btn-outline-danger btn-rounded">Daftar Sekarang</a>
         </div>
       </div>
     </div>

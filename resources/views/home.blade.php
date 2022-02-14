@@ -1,4 +1,5 @@
 <x-app-layout>
+    <x-navbar></x-navbar>
     <section class="intro-section">
         <div class="container">
           <div class="row align-items-center text-white">
@@ -33,12 +34,9 @@
             </div>
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#111" fill-opacity="1" d="M0,128L120,144C240,160,480,192,720,213.3C960,235,1200,245,1320,250.7L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg>
       </section>
 
-      <section class="section-2 pt-5">
+      <section class="section-2">
         <div class="container">
           <div class="sect-2-title text-center">
             <h1 class="text-white">Pilih Tempat Terbaikmu</h1>
@@ -92,9 +90,6 @@
             </div>
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#000" fill-opacity="1" d="M0,128L120,144C240,160,480,192,720,208C960,224,1200,224,1320,224L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg>
       </section>
 
       <section class="reason bg-primary">
@@ -143,9 +138,6 @@
             </div>
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#111" fill-opacity="1" d="M0,96L120,122.7C240,149,480,203,720,202.7C960,203,1200,149,1320,122.7L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
-        </svg>
       </section>
 
       <section class="sect-4">
@@ -198,4 +190,5 @@
           <path fill="#3a4f50" fill-opacity="1" d="M0,256L120,240C240,224,480,192,720,197.3C960,203,1200,245,1320,266.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
         </svg>
       </section>
+      <x-footer></x-footer>
 </x-app-layout>

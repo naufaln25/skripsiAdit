@@ -26,7 +26,7 @@ class Navbar extends Component
         $navbar =[
             'Home' => '/',
             'Venue' => '/venue',
-            'Review' => '/Review',
+            'Review' => '/review',
             'About' => '/about',
         ];
         return view('layouts.navbar', compact('navbar'));

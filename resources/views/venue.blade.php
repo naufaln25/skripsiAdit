@@ -1,4 +1,5 @@
 <x-app-layout>
+    <x-navbar></x-navbar>
     <section class="sect-venue bg-primary">
         <div class="container">
           <div class="text-title text-center">
@@ -12,7 +13,7 @@
                   <img src="../../img/basketballcourt.jpg" alt="" class="card-image" width="100%" />
                 </div>
                 <div class="p-3 button-card text-center cursor">
-                  <a class="text-uppercase text-light text-decoration-none" href="../pages/venue-detail.html">Basketball Hall</a>
+                  <a class="text-uppercase text-light text-decoration-none" href="{{route('venue-detail')}}">Basketball Hall</a>
                 </div>
               </div>
             </div>
@@ -52,4 +53,5 @@
           <path fill="#3a4f50" fill-opacity="1" d="M0,256L120,240C240,224,480,192,720,197.3C960,203,1200,245,1320,266.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
         </svg>
       </section>
+      <x-footer></x-footer>
 </x-app-layout>

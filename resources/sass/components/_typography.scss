@@ -9,11 +9,6 @@
         display: inline-block;
         font-weight: 700;
         font-size: 4rem;
-
-        @include media-breakpoint-down(md) {
-            font-size: 3rem;
-            display: inline-block;
-        }
     }
 
     &--description {
@@ -22,11 +17,6 @@
         margin-top: 1.2rem;
         text-transform: none;
         color: #8ca1a5;
-
-        @include media-breakpoint-up(lg) {
-            font-size: 1.4rem;
-            display: inline-block;
-        }
     }
 }
 
@@ -93,5 +83,53 @@
         font-weight: 400;
         font-size: 1.2rem;
         color: #8ca1a5;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .display-2 {
+        &--intro {
+            font-size: 3rem;
+        }
+
+        &--description {
+            font-size: 1rem;
+        }
+    }
+
+    .text-title {
+        h1 {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .text-title {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .display-2 {
+        &--intro {
+            font-size: 2.5rem;
+        }
+
+        &--description {
+            font-size: 1rem;
+        }
+    }
+
+    .text-title {
+        h1 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 }

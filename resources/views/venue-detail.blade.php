@@ -39,7 +39,10 @@
                 <form action="">
                   <div class="mb-3">
                     <label for="jamSewa" class="form-label text-white">Jam Sewa</label>
-                    <input type="email" class="form-control" id="jamSewa" aria-describedby="emailHelp" />
+                    <div class="input-group mb-3">
+                        <input type="text" id="timepicker" class="form-control" placeholder="Pilih Jam Sewa" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-clock    "></i></span>
+                    </div>
                   </div>
                   <div class="mb-3">
                     <label for="jamSewa" class="form-label text-white">Durasi Sewa</label>
@@ -47,12 +50,10 @@
                   </div>
                   <div class="mb-4">
                     <label for="tanggal" class="form-label text-white">Pilih Tanggal</label>
-                    <div class="input-group date" id="datepicker">
-                        <input type="text" class="form-control" placeholder="Pilih Tanggal" aria-describedby="basic-addon2">
-                        <span class="input-group-text" id="basic-addon2">
-                            <i class="fa fa-calendar" aria-hidden="true"></i>
-                        </span>
-                      </div>
+                    <div class="input-group">
+                        <input type="text" id="datetimepicker" class="form-control" placeholder="15-02-2022" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-calendar"></i></span>
+                    </div>
                   </div>
                   <div class="row mb-2">
                     <div class="col-md-6">
@@ -63,7 +64,7 @@
                     </div>
                   </div>
                   <div class="d-grid gap-2">
-                    <a class="btn btn-danger btn-submit" href="../pages/payment.html" role="button">Lanjutkan Pembayaran</a>
+                    <a class="btn btn-danger btn-submit" href="{{route('payment')}}" role="button">Lanjutkan Pembayaran</a>
                   </div>
                 </form>
               </div>
@@ -112,8 +113,24 @@
           </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path fill="#262626" fill-opacity="1" d="M0,256L120,240C240,224,480,192,720,197.3C960,203,1200,245,1320,266.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+          <path fill="#3a4f50" fill-opacity="1" d="M0,256L120,240C240,224,480,192,720,197.3C960,203,1200,245,1320,266.7L1440,288L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
         </svg>
       </section>
       <x-footer></x-footer>
+
+      <script type="text/javascript">
+          $(function(){
+              $('#datetimepicker').datetimepicker({
+                  timepicker:false,
+                  format: 'd-m-Y'
+              });
+          });
+
+          $(function(){
+              $('#timepicker').datetimepicker({
+                  datepicker:false,
+                  format: 'H:i'
+              });
+          });
+      </script>
 </x-app-layout>

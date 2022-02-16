@@ -29,7 +29,7 @@
                   <a class="btn btn-danger btn-submit" href="#" role="button">Sign In</a>
                 </div>
                 <div class="mb-3 text-center">
-                  <p class="text-white">Belum Punya Akun ? <a href="../pages/signup.html" class="text-danger"> Daftar Sekarang</a></p>
+                  <p class="text-white">Belum Punya Akun ? <a href="{{route('signup')}}" class="text-danger"> Daftar Sekarang</a></p>
                 </div>
               </form>
             </div>

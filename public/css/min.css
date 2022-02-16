@@ -17442,24 +17442,12 @@ readers do not read off random characters that represent icons */
   font-weight: 700;
   font-size: 4rem;
 }
-@media (max-width: 767.98px) {
-  .display-2--intro {
-    font-size: 3rem;
-    display: inline-block;
-  }
-}
 .display-2--description {
   font-size: 1rem;
   display: block;
   margin-top: 1.2rem;
   text-transform: none;
   color: #8ca1a5;
-}
-@media (min-width: 992px) {
-  .display-2--description {
-    font-size: 1.4rem;
-    display: inline-block;
-  }
 }
 
 .sect-2-title h1 {
@@ -17516,6 +17504,38 @@ readers do not read off random characters that represent icons */
   color: #8ca1a5;
 }
 
+@media (max-width: 991.98px) {
+  .display-2--intro {
+    font-size: 3rem;
+  }
+  .display-2--description {
+    font-size: 1rem;
+  }
+
+  .text-title h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .text-title h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .display-2--intro {
+    font-size: 2.5rem;
+  }
+  .display-2--description {
+    font-size: 1rem;
+  }
+
+  .text-title h1 {
+    font-size: 1.2rem;
+  }
+  .text-title p {
+    font-size: 1rem;
+  }
+}
 .card-review {
   padding: 1.8rem 0.5rem;
   background-color: #3a4f50;
@@ -17643,23 +17663,6 @@ readers do not read off random characters that represent icons */
 }
 .feature i {
   font-size: 1.2rem;
-}
-@media (max-width: 991.98px) {
-  .feature {
-    font-size: 1rem;
-    margin: 0;
-  }
-  .feature i {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 767.98px) {
-  .feature {
-    font-size: 0.85rem;
-  }
-  .feature i {
-    font-size: 0.85rem;
-  }
 }
 
 .reason {

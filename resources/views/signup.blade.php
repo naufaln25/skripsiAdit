@@ -14,19 +14,19 @@
               <h2 class="text-white mb-3 fw-bold">Daftar Akun Baru</h2>
               <p class="text-muted desc">Daftar sekarang dan mulai kegiatan bersama keluarga dan kerabat di CGV Arena</p>
               <form action="">
-                <div class="mb-5">
+                <div class="mb-4">
                   <input type="text" class="form-control form-log" id="nama" placeholder="Nama Lengkap" />
                   <span class="form-focus"></span>
                 </div>
-                <div class="mb-5">
+                <div class="mb-4">
                   <input type="text" class="form-control form-log" id="username" placeholder="Username" />
                   <span class="form-focus"></span>
                 </div>
-                <div class="mb-5">
+                <div class="mb-4">
                   <input type="email" class="form-control form-log" id="email" placeholder="Email" />
                   <span class="form-focus"></span>
                 </div>
-                <div class="mb-5">
+                <div class="mb-4">
                   <input type="tel" class="form-control form-log" id="telp" placeholder="Nomor Telepon" />
                   <span class="form-focus"></span>
                 </div>
@@ -34,11 +34,11 @@
                   <input type="password" class="form-control form-log" id="password" placeholder="******" />
                   <span class="form-focus"></span>
                 </div>
-                <div class="d-grid gap-2 mb-5">
+                <div class="d-grid gap-2 mb-4">
                   <a class="btn btn-danger btn-submit" href="#" role="button">Daftar Sekarang</a>
                 </div>
                 <div class="mb-3 text-center">
-                  <p class="text-white">Sudah Punya Akun ? <a href="../pages/signin.html" class="text-danger link">Login</a></p>
+                  <p class="text-white">Sudah Punya Akun ? <a href="{{route('signin')}}" class="text-danger link">Login</a></p>
                 </div>
               </form>
             </div>

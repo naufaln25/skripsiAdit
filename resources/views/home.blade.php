@@ -30,7 +30,7 @@
               </div>
             </div>
             <div class="col-md-6 text-end position-relative">
-              <img src="../img/intro-section.png" class="img-fluid" />
+              <img src="../img/intro-section.png" class="img-fluid text-end" style="max-width: 90%" />
             </div>
           </div>
         </div>

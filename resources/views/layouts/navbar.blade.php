@@ -12,10 +12,30 @@
               </li>
             @endforeach
         </ul>
-        <div class="d-flex align-items-center">
-          <a href="{{route('signin')}}" class="nav-link link-white me-2">Sign In</a>
-          <a href="{{route('signup')}}" class="btn btn-outline-danger btn-rounded">Daftar Sekarang</a>
+        @auth
+        <div class="d-flex nav-item dropdown no-arrow">
+            <a href="#" class="text-white" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Halo, {{Auth::user()->name}} !
+                <img src="{{Auth::user()->avatar}}">
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left:auto">
+                    <li>
+                        <a href="#" class="dropdown-item">My Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign Out</a>
+                        <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        </form>
+                    </li>
+                </ul>
+            </a>
         </div>
+        @else
+        <div class="d-flex align-items-center">
+            <a href="{{route('login')}}" class="nav-link link-white me-2">Sign In</a>
+            <a href="{{route('signup')}}" class="btn btn-outline-danger btn-rounded">Daftar Sekarang</a>
+          </div>
+        @endauth
       </div>
     </div>
   </nav>

@@ -18,7 +18,7 @@ class AdminUserSeeder extends Seeder
             'name' => 'admin',
             'username' => 'admin',
             'email' => 'admin@cgvarena.com',
-            'email_verified_at' => date('Y:m:d H:i:s', time()),
+            'email_verified_at' => date('Y-m-d H:i:s', time()),
             'password' => \bcrypt('admin'),
             'is_admin' => true
         ]);

@@ -17752,7 +17752,7 @@ readers do not read off random characters that represent icons */
 .venue-detail .description .btn-submit {
   height: 50px;
   font-weight: 600;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17761,6 +17761,24 @@ readers do not read off random characters that represent icons */
   margin-top: 100px;
 }
 
+@media (max-width: 991.98px) {
+  .venue-detail .description {
+    height: 55vh;
+  }
+  .venue-detail .description .total {
+    font-size: 15px;
+  }
+  .venue-detail .description .price {
+    font-size: 15px;
+  }
+  .venue-detail .description .btn-submit {
+    height: 55px;
+    font-size: 14px;
+  }
+  .venue-detail h4 {
+    font-size: 20px;
+  }
+}
 .payment {
   padding-top: 10rem;
   padding-bottom: 0;

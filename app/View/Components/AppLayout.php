@@ -7,9 +7,9 @@ use Illuminate\View\Component;
 class AppLayout extends Component
 {
     /**
-     * Create a new component instance.
+     * Get the view / contents that represents the component.
      *
-     * @return void
+     * @return \Illuminate\View\View
      */
 
     public $title;
@@ -19,11 +19,7 @@ class AppLayout extends Component
         $this -> title = $title ?? "";
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
+
     public function render()
     {
         return view('layouts.app');

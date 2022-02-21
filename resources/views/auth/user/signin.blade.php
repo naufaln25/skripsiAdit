@@ -22,12 +22,15 @@
                   <input type="password" class="form-control form-log" id="password" placeholder="******" />
                   <span class="form-focus"></span>
                 </div>
-                <div class="mb-5 text-end">
+                <div class="mb-4 text-end">
                   <a href="#" class="fw-bold link-password">Lupa Password ?</a>
                 </div>
-                <div class="d-grid gap-2 mb-5">
+                <div class="d-grid gap-2 mb-4">
                   <a class="btn btn-danger btn-submit" href="#" role="button">Sign In</a>
                 </div>
+                <div class="d-grid gap-2 mb-5">
+                    <a class="btn btn-secondary btn-submit" href="{{route('user.login.google')}}" role="button">Sign In with Google</a>
+                  </div>
                 <div class="mb-3 text-center">
                   <p class="text-white">Belum Punya Akun ? <a href="{{route('signup')}}" class="text-danger"> Daftar Sekarang</a></p>
                 </div>

@@ -7,12 +7,12 @@
               <h1 class="display-2">
                 <span class="display-2--intro">Enjoy your time. Find best place for entertainment & sports.</span>
                 <span class="display-2--description lh-lg">We provide what you need to enjoy your quality time with family & friends</span>
-                <button class="btn btn-danger btn-rounded-intro">
+                <a href="#section2" class="btn btn-danger btn-rounded-intro" >
                   Get Started
                   <span>
                     <i class="fas fa-arrow-right" aria-hidden="true"></i>
                   </span>
-                </button>
+                </a>
               </h1>
               <div class="feature d-flex justify-content-between my-4 me-5">
                 <div class="d-flex">
@@ -36,7 +36,7 @@
         </div>
       </section>
 
-      <section class="section-2">
+      <section class="section-2" id="section2">
         <div class="container">
           <div class="sect-2-title text-center">
             <h1 class="text-white">Pilih Tempat Terbaikmu</h1>

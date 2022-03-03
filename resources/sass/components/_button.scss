@@ -2,9 +2,8 @@
 @use "mixins" as *;
 
 .btn-rounded {
-    padding: 0.75rem 1rem;
-    border-radius: 10px;
-    font-weight: 500;
+    padding: 11px 36px 11px 36px;
+    border-radius: 100px;
 }
 
 .btn-rounded-intro {
@@ -25,4 +24,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.btn-log {
+    border-radius: 45px;
+}
+
+.btn-log:hover {
+    background-color: $gray-900;
 }

@@ -12,8 +12,8 @@
               <div class="card card-payment mb-5">
                 <img src="../../img/basketballcourt.jpg" class="card-img-top card-payment--image" alt="..." />
                 <div class="card-body mx-2 my-2">
-                  <p class="card-text card-payment--title">Basketball Hall</p>
-                  <p class="card-text card-payment--price">Rp.150.000 / <small class="text-muted">Jam</small></p>
+                  <p class="card-text card-payment--title">{{$checkout->Venue->name}}</p>
+                  <p class="card-text card-payment--price">Rp. {{number_format($checkout->Venue->price, 0, ',', '.')}} / <small class="text-muted">Jam</small></p>
                 </div>
               </div>
             </div>
@@ -22,19 +22,19 @@
                 <h5 class="text-center fw-bold mb-5">Detail Pembayaran</h5>
                 <div class="mb-3 d-flex justify-content-between">
                   <p>Nama Penyewa</p>
-                  <p class="fw-bold text-end">Ahmad Lutfi Prawira Sanjaya</p>
+                  <p class="fw-bold text-end">{{Auth::user()->name}}</p>
                 </div>
                 <div class="mb-3 d-flex justify-content-between">
                   <p>Tanggal Sewa</p>
-                  <p class="fw-bold">15 Desember 2021</p>
+                  <p class="fw-bold">{{$checkout->tanggal_sewa->format('d M Y')}}</p>
                 </div>
                 <div class="mb-3 d-flex justify-content-between">
                   <p>Jam Sewa</p>
-                  <p class="fw-bold">14.00</p>
+                  <p class="fw-bold">{{$checkout->jam_sewa->format('H:i')}}</p>
                 </div>
                 <div class="mb-5 d-flex justify-content-between">
                   <p>Durasi Sewa</p>
-                  <p class="fw-bold">2 Jam</p>
+                  <p class="fw-bold"> {{$checkout->durasi}} Jam</p>
                 </div>
 
                 <!-- metode pembayaran -->
@@ -51,11 +51,7 @@
                   <div class="tab-pane fade show active ms-1" id="pills-otomatis" role="tabpanel" aria-labelledby="pills-otomatis-tab">
                     <div class="mb-3 d-flex justify-content-between">
                       <p>Harga Sewa</p>
-                      <p class="fw-bold">Rp. 150.000</p>
-                    </div>
-                    <div class="mb-3 d-flex justify-content-between">
-                      <p>Durasi Sewa</p>
-                      <p class="fw-bold">2 Jam</p>
+                      <p class="fw-bold">Rp. {{number_format($checkout->Venue->price, 0, ',', '.')}}</p>
                     </div>
                     <div class="mb-3 d-flex justify-content-between">
                       <p>Tax</p>
@@ -63,7 +59,7 @@
                     </div>
                     <div class="mb-5 d-flex justify-content-between">
                       <p>Total Bayar</p>
-                      <p class="fw-bold">Rp. 330.000</p>
+                      <p class="fw-bold">Rp. {{$checkout->total}}</p>
                     </div>
                     <div class="d-grid gap-2">
                       <a class="btn btn-danger btn-submit" href="../pages/payment-success.html" role="button">Bayar Menggunakan Midtrans</a>
@@ -73,11 +69,7 @@
                     <div class="tab-pane fade show active ms-1" id="pills-manual" role="tabpanel" aria-labelledby="pills-manual-tab">
                       <div class="mb-3 d-flex justify-content-between">
                         <p>Harga Sewa</p>
-                        <p class="fw-bold">Rp. 150.000</p>
-                      </div>
-                      <div class="mb-3 d-flex justify-content-between">
-                        <p>Durasi Sewa</p>
-                        <p class="fw-bold">2 Jam</p>
+                        <p class="fw-bold">Rp. {{number_format($checkout->Venue->price, 0, ',', '.')}}</p>
                       </div>
                       <div class="mb-3 d-flex justify-content-between">
                         <p>Tax</p>
@@ -85,7 +77,7 @@
                       </div>
                       <div class="mb-5 d-flex justify-content-between">
                         <p>Total Bayar</p>
-                        <p class="fw-bold">Rp. 330.000</p>
+                        <p class="fw-bold">Rp. {{number_format($checkout->total, 0, ',', '.')}}</p>
                       </div>
 
                       <!-- Transfer -->

@@ -1,0 +1,13 @@
+@use "../app.scss" as *;
+@use "../components/mixins" as *;
+
+.dashboard {
+    padding: 10rem 0 8rem 0;
+    font-family: "Poppins", sans-serif;
+
+    .story {
+        font-weight: 600;
+        font-size: 16px;
+        color: #31b380;
+    }
+}

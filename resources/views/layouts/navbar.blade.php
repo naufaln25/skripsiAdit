@@ -13,22 +13,22 @@
             @endforeach
         </ul>
         @auth
-        <div class="d-flex nav-item dropdown no-arrow">
-            <a href="#" class="text-white" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="d-flex nav-item dropdown no-arrow user-logged btn-log">
+            <a href="#" class="nav-link username" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                 Halo, {{Auth::user()->name}} !
-                <img src="{{Auth::user()->avatar}}">
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left:auto">
-                    <li>
-                        <a href="#" class="dropdown-item">My Dashboard</a>
-                    </li>
-                    <li>
-                        <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign Out</a>
-                        <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        </form>
-                    </li>
-                </ul>
+                <img src="{{Auth::user()->avatar}}" class="avatar">
             </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropmenu mt-3" aria-labelledby="dropdownMenuLink" style="right: 0; left:auto">
+                <li>
+                    <a href="{{route('dashboard')}}" class="dropdown-item dropitem">My Dashboard</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item dropitem" onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign Out</a>
+                    <form id="logout-form" action="{{route('logout')}}" method="POST" style="display: none">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    </form>
+                </li>
+            </ul>
         </div>
         @else
         <div class="d-flex align-items-center">

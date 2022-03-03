@@ -13,7 +13,7 @@
                   <img src="../../img/basketballcourt.jpg" alt="" class="card-image" width="100%" />
                 </div>
                 <div class="p-3 button-card text-center cursor">
-                  <a class="text-uppercase text-light text-decoration-none" href="{{route('venue-detail')}}">Basketball Hall</a>
+                  <a class="text-uppercase text-light text-decoration-none" href="{{route('venue-detail.create', 'basketball-hall')}}">Basketball Hall</a>
                 </div>
               </div>
             </div>
@@ -23,7 +23,7 @@
                   <img src="../../img/basketballcourt2.jpg" alt="" class="card-image" width="100%" />
                 </div>
                 <div class="p-3 button-card text-center cursor">
-                  <a class="text-uppercase text-light text-decoration-none" href="../pages/venue-detail.html">Billiard Venue</a>
+                  <a class="text-uppercase text-light text-decoration-none" href="{{route('venue-detail.create', 'billiard-venue')}}">Billiard Venue</a>
                 </div>
               </div>
             </div>
@@ -33,7 +33,7 @@
                   <img src="../../img/basketballcourt3.jpg" alt="" class="card-image" width="100%" />
                 </div>
                 <div class="p-3 button-card text-center cursor">
-                  <a class="text-uppercase text-light text-decoration-none" href="../pages/venue-detail.html">Golden Class Theater</a>
+                  <a class="text-uppercase text-light text-decoration-none" href="{{route('venue-detail.create', 'goldenclass-theather')}}">Golden Class Theater</a>
                 </div>
               </div>
             </div>
@@ -43,7 +43,7 @@
                   <img src="../../img/basketballcourt.jpg" alt="" class="card-image" width="100%" />
                 </div>
                 <div class="p-3 button-card text-center cursor">
-                  <a class="text-uppercase text-light text-decoration-none" href="../pages/venue-detail.html">Silver Class Theater</a>
+                  <a class="text-uppercase text-light text-decoration-none" href="{{route('venue-detail.create', 'silverclass-theater')}}">Silver Class Theater</a>
                 </div>
               </div>
             </div>

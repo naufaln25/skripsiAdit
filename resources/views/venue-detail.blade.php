@@ -26,34 +26,43 @@
           <div class="description bg-secondary">
             <div class="row">
               <div class="col-md-7">
-                <h1 class="desc-title text-white">Basketball Hall</h1>
+                <h1 class="desc-title text-white text-capitalize">{{$venue->name}}</h1>
                 <p class="desc-loc text-muted mb-4">CGV Teras Kota</p>
                 <p class="desc-text text-white">
-                  Tempat terbaik untuk berlatih bersama tim basketmu. Lapangan basket ini dilengkapi dengan fasilitas yang terbaik dan lengkap sehingga dapat menunjang tim kamu untuk berlatih dengan baik dan maksimal. Kamu juga dapat
-                  melakukan pertandingan atau sparing bersama lawanmu.
+                  {{$venue->description}}
                 </p>
               </div>
               <div class="col-md-1"></div>
               <div class="col-md-4">
-                <h4 class="text-light fw-bold mb-3">Rp. 150.000 / <small class="text-muted">Jam</small></h4>
-                <form action="">
+                <h4 class="text-light fw-bold mb-3">Rp. {{number_format($venue->price, 0, ',', '.')}} / <small class="text-muted">Jam</small></h4>
+                <form action="{{route('checkout.store', $venue->id)}}" method="POST">
+                    @csrf
                   <div class="mb-3">
-                    <label for="jamSewa" class="form-label text-white">Jam Sewa</label>
+                    <label for="jam_sewa" class="form-label text-white">Jam Sewa</label>
                     <div class="input-group mb-3">
-                        <input type="text" id="timepicker" class="form-control" placeholder="Pilih Jam Sewa" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-clock    "></i></span>
+                        <input name="jam_sewa" type="time" id="timepicker" class="form-control {{$errors->has('jam_sewa') ? 'is-invalid' : ''}}" placeholder="Pilih Jam Sewa" aria-describedby="basic-addon2" required>
+                        <span class="input-group-text" id="basic-addon2"><i class="fas fa-clock"></i></span>
                     </div>
+                    @if($errors->has('jam_sewa'))
+                        <p class="text-muted notif">*{{$errors->first('jam_sewa')}}</p>
+                    @endif
                   </div>
                   <div class="mb-3">
-                    <label for="jamSewa" class="form-label text-white">Durasi Sewa</label>
-                    <input type="email" class="form-control" id="jamSewa" aria-describedby="emailHelp" />
+                    <label for="durasi" class="form-label text-white">Durasi Sewa</label>
+                    <input name="durasi" type="number" class="form-control {{$errors->has('durasi') ? 'is-invalid' : ''}}" id="durasi" aria-describedby="emailHelp" required />
+                    @if($errors->has('durasi'))
+                        <p class="text-muted notif">*{{$errors->first('durasi')}}</p>
+                    @endif
                   </div>
                   <div class="mb-4">
-                    <label for="tanggal" class="form-label text-white">Pilih Tanggal</label>
+                    <label for="tanggal_sewa" class="form-label text-white">Pilih Tanggal</label>
                     <div class="input-group">
-                        <input type="text" id="datetimepicker" class="form-control" placeholder="15-02-2022" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input name="tanggal_sewa" type="date" id="datetimepicker" class="form-control {{$errors->has('tanggal_sewa') ? 'is-invalid' : ''}}" placeholder="dd-mm-yyyy" aria-describedby="basic-addon2" required>
                         <span class="input-group-text" id="basic-addon2"><i class="fas fa-calendar"></i></span>
                     </div>
+                    @if($errors->has('tanggal_sewa'))
+                        <p class="text-muted notif">*{{$errors->first('tanggal_sewa')}}</p>
+                    @endif
                   </div>
                   <div class="row mb-2">
                     <div class="col-md-6">
@@ -64,7 +73,7 @@
                     </div>
                   </div>
                   <div class="d-grid gap-2">
-                    <a class="btn btn-danger btn-submit" href="{{route('payment')}}" role="button">Lanjutkan Pembayaran</a>
+                    <button type="submit" class="btn btn-danger btn-submit">Lanjutkan Pembayaran</button>
                   </div>
                 </form>
               </div>
@@ -119,12 +128,9 @@
       <x-footer></x-footer>
 
       <script type="text/javascript">
-          $(function(){
-              $('#datetimepicker').datetimepicker({
-                  timepicker:false,
-                  format: 'd-m-Y'
-              });
-          });
+            $( function() {
+                $( "#datepicker" ).datepicker();
+            });
 
           $(function(){
               $('#timepicker').datetimepicker({

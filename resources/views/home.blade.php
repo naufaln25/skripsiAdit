@@ -50,7 +50,7 @@
                   <h5 class="card-title mb-3">Gold Class Theater</h5>
                   <p class="card-text fw-bold mb-4">Rp. 150.000 / <small class="text-muted">hour</small></p>
                   <div class="d-grid gap-2 mb-1">
-                    <a href="#" class="btn btn-danger btn-small">Pesan Sekarang</a>
+                    <a href="{{route('venue-detail.create', 'goldenclass-theather')}}" class="btn btn-danger btn-small">Pesan Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -58,10 +58,10 @@
               <div class="card card-item text-center text-white" style="width: 18rem">
                 <img src="../../img/basketballcourt.jpg" class="card-img-top card-item-img mb-3" alt="basketball court" />
                 <div class="card-body">
-                  <h5 class="card-title mb-3">Gold Class Theater</h5>
+                  <h5 class="card-title mb-3">Silver Class Theater</h5>
                   <p class="card-text fw-bold mb-4">Rp. 150.000 / <small class="text-muted">hour</small></p>
                   <div class="d-grid gap-2 mb-1">
-                    <a href="#" class="btn btn-danger btn-small">Pesan Sekarang</a>
+                    <a href="{{route('venue-detail.create', 'silverclass-theater')}}" class="btn btn-danger btn-small">Pesan Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -69,10 +69,10 @@
               <div class="card card-item text-center text-white" style="width: 18rem">
                 <img src="../../img/basketballcourt.jpg" class="card-img-top card-item-img mb-3" alt="basketball court" />
                 <div class="card-body">
-                  <h5 class="card-title mb-3">Gold Class Theater</h5>
+                  <h5 class="card-title mb-3">Basketball Hall</h5>
                   <p class="card-text fw-bold mb-4">Rp. 150.000 / <small class="text-muted">hour</small></p>
                   <div class="d-grid gap-2 mb-1">
-                    <a href="#" class="btn btn-danger btn-small">Pesan Sekarang</a>
+                    <a href="{{route('venue-detail.create', 'basketball-hall')}}" class="btn btn-danger btn-small">Pesan Sekarang</a>
                   </div>
                 </div>
               </div>
@@ -80,10 +80,10 @@
               <div class="card card-item text-center text-white" style="width: 18rem">
                 <img src="../../img/basketballcourt.jpg" class="card-img-top card-item-img mb-3" alt="basketball court" />
                 <div class="card-body">
-                  <h5 class="card-title mb-3">Gold Class Theater</h5>
+                  <h5 class="card-title mb-3">Billiard Venue</h5>
                   <p class="card-text fw-bold mb-4">Rp. 150.000 / <small class="text-muted">hour</small></p>
                   <div class="d-grid gap-2 mb-1">
-                    <a href="#" class="btn btn-danger btn-small">Pesan Sekarang</a>
+                    <a href="{{route('venue-detail.create', 'billiard-venue')}}" class="btn btn-danger btn-small">Pesan Sekarang</a>
                   </div>
                 </div>
               </div>

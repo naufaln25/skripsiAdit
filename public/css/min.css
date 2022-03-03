@@ -17407,9 +17407,8 @@ readers do not read off random characters that represent icons */
 }
 
 .btn-rounded {
-  padding: 0.75rem 1rem;
-  border-radius: 10px;
-  font-weight: 500;
+  padding: 11px 36px 11px 36px;
+  border-radius: 100px;
 }
 
 .btn-rounded-intro {
@@ -17430,6 +17429,14 @@ readers do not read off random characters that represent icons */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-log {
+  border-radius: 45px;
+}
+
+.btn-log:hover {
+  background-color: #171717;
 }
 
 .display-2 {
@@ -17617,6 +17624,16 @@ readers do not read off random characters that represent icons */
   font-weight: 500;
 }
 
+.dashboard {
+  padding: 10rem 0 8rem 0;
+  font-family: "Poppins", sans-serif;
+}
+.dashboard .story {
+  font-weight: 600;
+  font-size: 16px;
+  color: #31b380;
+}
+
 .menu .logo {
   font-weight: 700;
   font-size: 1.5rem;
@@ -17626,6 +17643,19 @@ readers do not read off random characters that represent icons */
 }
 .menu li a {
   text-transform: capitalize;
+}
+.menu .user-logged a .avatar {
+  width: 56px;
+  height: 56px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.menu .user-logged .dropmenu {
+  width: 250px;
+  border-radius: 15px;
+}
+.menu .user-logged:hover .username {
+  color: white;
 }
 
 .section-2 {
@@ -17725,7 +17755,7 @@ readers do not read off random characters that represent icons */
 }
 .venue-detail .description {
   width: 100%;
-  height: 53vh;
+  height: 60vh;
   border-radius: 40px;
   position: relative;
   top: -80px;
@@ -17752,33 +17782,29 @@ readers do not read off random characters that represent icons */
 .venue-detail .description .btn-submit {
   height: 50px;
   font-weight: 600;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 991.98px) {
+  .venue-detail .description {
+    height: 75vh;
+  }
+  .venue-detail .description .price {
+    font-size: 12pt;
+  }
+  .venue-detail .notif {
+    font-size: 10pt;
+  }
+  .venue-detail .btn-submit {
+    font-size: 10pt;
+  }
 }
 .venue-detail .review-venue {
   margin-top: 100px;
 }
 
-@media (max-width: 991.98px) {
-  .venue-detail .description {
-    height: 55vh;
-  }
-  .venue-detail .description .total {
-    font-size: 15px;
-  }
-  .venue-detail .description .price {
-    font-size: 15px;
-  }
-  .venue-detail .description .btn-submit {
-    height: 55px;
-    font-size: 14px;
-  }
-  .venue-detail h4 {
-    font-size: 20px;
-  }
-}
 .payment {
   padding-top: 10rem;
   padding-bottom: 0;

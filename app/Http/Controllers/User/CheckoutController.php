@@ -9,6 +9,8 @@ use App\Http\Requests\User\Checkout\Store;
 use App\Models\Venue;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Checkout\AfterCheckout;
 
 class CheckoutController extends Controller
 {
@@ -40,7 +42,6 @@ class CheckoutController extends Controller
      */
     public function store(Store $request, Venue $venue)
     {
-        return $request->all();
 
         $data = $request->all();
         $data['user_id'] = Auth::id();
@@ -48,6 +49,9 @@ class CheckoutController extends Controller
 
         // create table checkout
         $checkout = Checkout::create($data);
+
+        // sending email
+        Mail::to(Auth::user()->email)->send(new AfterCheckout($checkout));
 
         return redirect(route('checkout.payment'));
     }
@@ -104,4 +108,9 @@ class CheckoutController extends Controller
             'checkout' => $checkout
         ]);
     }
+
+    // public function invoice(Checkout $checkout)
+    // {
+    //     return $checkout;
+    // }
 }

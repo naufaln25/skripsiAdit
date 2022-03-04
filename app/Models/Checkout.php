@@ -23,7 +23,6 @@ class Checkout extends Model
 
     protected $dates =['tanggal_sewa', 'jam_sewa'];
 
-    protected $primaryKey = 'checkout_id';
     /**
      * Get the Venue that owns the Checkout
      *
@@ -32,5 +31,15 @@ class Checkout extends Model
     public function Venue(): BelongsTo
     {
         return $this->belongsTo(Venue::class);
+    }
+
+    /**
+     * Get the user that owns the Checkout
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function User(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
     }
 }
